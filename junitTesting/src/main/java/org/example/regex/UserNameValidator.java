@@ -7,7 +7,7 @@ public class UserNameValidator {
     private Pattern namePattern;
    private Pattern phonePattern;
    private Pattern emailPathern;
-    private static final String username_regex = "^[A-Z][a-z0-9_-]{2,15}$";
+    private static final String username_regex = "^[A-Z][a-z0-9_-]{2,}$";
     private static final String phone_number = "^\\+\\d{1,2}[\\s]\\d{10}$|^\\d{10}$";
     private static final String email_regex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-z]{3}$";
 
