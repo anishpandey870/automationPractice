@@ -2,6 +2,7 @@ package org.example.java8Feature.streamApi;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -34,7 +35,7 @@ public class StreamMap {
         List<String> vehicle=Arrays.asList("car","bus","motercycle","car","cycle","bus","car");
 //       List<String> resVehicle= vehicle.stream().distinct().collect(Collectors.toList());
 //       System.out.println(resVehicle);
-        vehicle.stream().distinct().forEach(n->System.out.println(n));
+        vehicle.stream().distinct().forEach(System.out::println);
 
         //using count()
       long counts=  vehicle.stream().distinct().count();
@@ -43,5 +44,18 @@ public class StreamMap {
       //using limit()
        List<String> limitList= vehicle.stream().limit(2).collect(Collectors.toList());
        System.out.println(limitList);
+
+       //using sorted()
+      List<String>sortedVehicle =  vehicle.stream().sorted().collect(Collectors.toList());
+      System.out.println(sortedVehicle);
+        //using sorted() in reverse order
+        List<String>reverseVehicle =  vehicle.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+        System.out.println(reverseVehicle);
+        //using anyMatch()
+        //using sorted()
+        boolean matchVehicle =  vehicle.stream().anyMatch(m->{
+            return m.startsWith("moter");
+        });
+        System.out.println(matchVehicle);
     }
 }
