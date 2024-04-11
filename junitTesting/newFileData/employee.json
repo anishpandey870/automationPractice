@@ -1,0 +1,16 @@
+{
+  "firstName": "anish",
+  "lastName": "pandey",
+  "address": [
+    {
+      "street": "Btm layout",
+      "city": "bangalore",
+      "state": "karnatka"
+    },
+    {
+      "street": "marathalli",
+      "city": "bangalore",
+      "state": "karnatka"
+    }
+  ]
+}

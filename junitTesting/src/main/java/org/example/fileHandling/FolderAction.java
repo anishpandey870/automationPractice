@@ -14,8 +14,8 @@ public class FolderAction {
 
     //check the folder or not
     public static boolean checkExistedFolder(String folderPath) {
-        File file = new File(folderPath);
-        return (file.exists());
+        File folder = new File(folderPath);
+        return (folder.exists());
     }
 
     /*
@@ -29,7 +29,7 @@ public class FolderAction {
             System.out.println("folder rename :" + newPath);
         }
     }
-    
+
     //delete the folder
     public static void deleteFolder(String path) {
         File folderPath = new File(path);
@@ -42,11 +42,11 @@ public class FolderAction {
 
     public static void main(String[] args) {
         String path = "D:\\myNewFile";
-        //  FolderAction.createFolder(path);
+          FolderAction.createFolder(path);
         boolean check = FolderAction.checkExistedFolder(path);
         System.out.println(check);
         String newFolderPath = "C:\\myNewFile";
         //FolderAction.renameFolder(path,newFolderPath);
-        FolderAction.deleteFolder(path);
+        //FolderAction.deleteFolder(path);
     }
 }
